@@ -1,0 +1,227 @@
+
+section {
+	.container-fluid {
+		padding: 120px 50px;
+	}
+	@media (max-width: 767px) {
+		.container-fluid {
+			padding: 20% 3% 15%;
+		}
+	}
+}
+#services {
+	bg-services {
+		padding-right: 30px;
+	}
+	.nuestrosservicios {
+		padding-left: 10%;
+	}
+	p {
+		font-size: 14px;
+		color: $gray;
+	}
+	.servicio {
+		@include clearfix;
+		margin-top: 50px;
+		.icono {
+			float: left;
+			margin-right: 20px;
+			padding-top: 10px;
+			height: 90px;
+			img {
+				opacity: 0.3;
+			}
+
+		}
+	}
+}
+#about {
+	background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../images/bg3.jpg);
+	background-size: cover;
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+	h2 {
+		color: #fff;
+	}
+	.subrayado {
+		border-color: #fff;
+	}
+	p {
+		color: #fff;
+		line-height: 1.5;
+		text-align: left;
+		padding-right: 80px;
+		@media (max-width: 767px) {
+			text-align: center;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	.video {
+		padding-top: 40px;
+	}
+}
+#team {
+	.equipo {
+		text-align: left;
+		padding: 40px 0 20px 30px;
+		color: $black;
+		font-family: Helvetica, sans-serif;
+		height: 300px;	
+		@media (max-width: 767px) {
+			text-align: center;
+			padding: 20px 0;
+		}
+	}
+	.nombre {
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 5px;
+	}
+	.cargo {
+		font-size: 13px;
+		margin-bottom: 15px;
+	}
+	.team {
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 300px;
+	}
+	.team1 {
+		background-image:url(../images/member7.jpg);
+	}
+	.team2 {
+		background-image:url(../images/member8.jpg);
+	}
+	.team3 {
+		background-image:url(../images/member9.jpg);
+	}
+	.team4 {
+		background-image:url(../images/member10.jpg);
+	}
+	.redes {
+		margin-top: 40px;
+		@include redes(18px);
+	}
+}
+#pricing {
+	.paquete {
+		background-color: #F0F0F1;
+		padding-top: 15px;
+		.row {
+			margin: 0;
+		}
+	}
+	.clasepaquete {
+		color: $gray;
+		text-transform: capitalize;
+		font-size: 35px;
+		font-weight: 700;
+	}
+	.precio {
+		color: $black;
+		font-size: 40px;
+		font-weight: 700;
+		span {
+			font-size: 55px;
+		}
+	}
+	.borde {
+		border-top: 1px solid #CECECE;
+		padding: 15px;
+		img {
+			opacity: 0.5;
+		}
+		p {
+			margin-top: 15px;
+		}
+	}
+	.bordelateral {
+		border-right: 1px solid #CECECE;
+	}
+	.order {
+		background-color: $black;
+		padding: 20px 0;
+		a {
+			color: white;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+}
+#contact {
+	p {
+		font-size: 13px;
+		color: $gray;
+	}
+	.contactanos {
+		text-align: left;
+		padding-right: 210px;
+		line-height: 1.5;
+		color: $gray;
+		@media (max-width: 767px) {
+			text-align: center;
+			padding: 0 15px;			
+		}
+	}
+	input {
+		width: 80%;
+		font-size: 13px;
+		border-radius: 1px;
+		padding: 10px;
+		border: 1px solid $light-gray;
+		margin-bottom: 20px;
+		text-align: left;
+		outline: none;
+	}
+	textarea {
+		@extend input;
+		height: 100px;
+	}
+	.submit {
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+		background-color: #444;
+		color: #fff;
+		width: 100px;
+		border: none;
+		display: block;
+	}
+	.info-lateral {
+		padding-top: 80px;
+	}
+	.resaltado {
+		font-size: 14px;
+		font-weight: 700;
+		color: $gray;
+	}
+	.titulo {
+		text-transform: uppercase;
+	}
+	.contacto {
+		padding: 15px 0;
+	}
+	.redes-contacto {
+		text-align: left;
+		@include redes(12px);
+		margin: 10px 0 10px -5px;
+	}
+	.enlacescontacto {
+		.flecha {
+			float: left;
+			i {
+				background-color: #333;
+				color: #fff;
+				font-size: 14px;
+				padding: 4px 3px;
+			}
+		}
+
+		p {
+			text-transform: capitalize;
+			margin-left: 50px;
+		}
+	}
+}

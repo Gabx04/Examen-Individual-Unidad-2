@@ -1,0 +1,52 @@
+mixin servicios(src, nombreservicio)
+	.servicio
+		.icono
+			img(src= src)
+		.sobreservicio
+			h5= nombreservicio
+			p= textoservicios
+mixin redessociales()
+	.redes
+		a(href="#"): i.social_facebook
+		a(href="#"): i.social_twitter
+		a(href="#"): i.social_googleplus
+		a(href="#"): i.social_pinterest
+		a(href="#"): i.social_linkedin
+mixin equipo(nombre, cargo)
+	.equipo
+		p.nombre= nombre
+		p.cargo= cargo
+		p= textoequipo
+		block
+		+redessociales
+mixin paquetes(precioendolares, users, pages, storage, emails)
+	.col-xs-12.col-sm-6.col-md-3
+		.paquete.text-center
+			p.clasepaquete Starter
+			p.precio
+				span= precioendolares
+				|/mo
+			.row
+				.col-xs-6.borde.bordelateral
+					img(src="assets/images/man88.png")
+					p= users
+				.col-xs-6.borde
+					img(src="assets/images/rectangles29.png")
+					p= pages
+				.col-xs-6.borde.bordelateral
+					img(src="assets/images/database22.png")
+					p= storage
+				.col-xs-6.borde
+					img(src="assets/images/email162.png")
+					p= emails
+			p.order
+				a(href="#") order now
+mixin red(clase)
+	a(href="#"): i(class= clase)
+mixin enlaces(titulo)
+	a.enlacescontacto(href="#")
+		.flecha
+			i.arrow_carrot-down
+		p.resaltado= titulo
+
+

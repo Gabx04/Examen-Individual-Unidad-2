@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+		title W Studio
+		link(href="https://fonts.googleapis.com/css?family=Raleway:400,700,800,900", rel="stylesheet", type="text/css")
+		link(href="assets/css/elegant.css", rel="stylesheet", type="text/css")
+		link(href="assets/css/bootstrap.css", rel="stylesheet")
+		link(href="assets/css/main.css", rel="stylesheet")
+	body
+		include ./_variables
+		include ./_mixins
+
+		nav.navbar.navbar-default.navbar-fixed-top
+			.container-fluid
+				.navbar-header.page-scroll
+					button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#navbar-collapse-1")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand.page-scroll(href="#header")
+						img(src="assets/images/w-logo.jpg")
+				#navbar-collapse-1.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li
+							a(href="#header").page-scroll home
+						li
+							a(href="#services").page-scroll services
+						li
+							a(href="#about").page-scroll about
+						li
+							a(href="#portfolio").page-scroll portfolio
+						li
+							a(href="#testimonial").page-scroll testimonial
+						li
+							a(href="#pricing").page-scroll pricing
+						li
+							a(href="#contact").page-scroll contact
+		header#header
+			.container-fluid
+				h1 stand out from the crowd
+				p For photographer and freelancer who want to exclusively showcase their products.
+		section#services
+			.container-fluid
+				.row
+					.hidden-xs.col-md-6.bg-services
+						img(src="assets/images/p15.jpg")
+					.col-xs-12.col-md-6.nuestrosservicios
+						h2
+							|services
+							br
+							|we provide
+							hr.subrayado
+						p= textoservicios
+						+servicios("assets/images/online-store15.png", "psd template design")
+						+servicios("assets/images/mug16.png", "graphic design")
+						+servicios("assets/images/photography88.png", "photography")
+		section#about
+			.container-fluid
+				.row
+					.col-xs-12.col-md-6
+						h2
+							|welcome to
+							br
+							|w studio
+							hr.subrayado
+						p= textopresentacion
+					.hidden-xs.col-md-6
+						.video
+							video(src="assets/images/video.mp4", width="500", height="281", controls, frameborder="0",  webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+		section#team
+			.container-fluid
+				.row
+					.col-xs-12
+						h2
+							|meet the
+							br
+							|team
+							hr.subrayado
+				.row
+					.col-xs-6.col-md-3.team.team1
+					.col-xs-6.col-md-3
+						+equipo("nethanel gilroy", "Founder & CEO")
+					.col-xs-6.col-md-3.team.team2
+					.col-xs-6.col-md-3
+						+equipo("narek rouben", "Marketing Director")
+				.row
+					.col-xs-6.col-md-3
+						+equipo("samantha milner", "Creative Director")
+					.col-xs-6.col-md-3.team.team3
+					.col-xs-6.col-md-3
+						+equipo("louise alastriona", "Ui/UX Specialist")
+					.col-xs-6.col-md-3.team.team4
+		section#pricing
+			.container-fluid
+				.row
+					.col-xs-12
+						h2
+							|our best
+							br
+							|offers
+							hr.subrayado
+				.row
+					+paquetes("$50", "20 users", "10 pages", "20 gb storage", "100 emails")
+					+paquetes("$70", "50 users", "30 pages", "50 gb storage", "150 emails")
+					+paquetes("$50", "20 users", "10 pages", "20 gb storage", "100 emails")
+					+paquetes("$70", "50 users", "30 pages", "50 gb storage", "150 emails")
+		section#contact
+			.container-fluid
+				.row
+					.col-xs-12.col-md-9
+						h2
+							|contact
+							br
+							|us
+							hr.subrayado
+						p.contactanos We love being a web designer and we're incredibly thankful that we decided to join this industry many years ago. Contact us so we can help better.
+						form(action="")#usrform
+							input(type="text", name="name", value="", placeholder="Name*")
+							input(type="text", name="email", value="", placeholder="Email*")
+							input(type="text", name="phone", value="", placeholder="Subject")
+							textarea(name="message", placeholder="Message*", form="usrform")
+							input(type="submit", value="SUBMIT").submit
+					.col-xs-12.col-md-3.info-lateral
+						p.titulo.resaltado.info contact info
+						.contacto
+							p
+								|1455 19th St.
+								br
+								|Santa Monica, CA 90404
+							p
+								span.titulo.resaltado email
+								| : yourmail@yourdomain.com
+							p
+								span.titulo.resaltado phone
+								| : +88 (0) 101 0000 000
+							p
+								span.titulo.resaltado fax
+								| : +88 (0) 202 0000 001
+
+						p.titulo.resaltado connect with us
+							.redes-contacto.text-center
+								mixin red("social_facebook")
+								mixin red("social_twitter")
+								mixin red("social_googleplus")
+								mixin red("social_pinterest")
+								mixin red("social_linkedin")
+								mixin red("social_tumblr")
+							.redes-contacto.text-center
+								mixin red("social_tumbleupon")
+								mixin red("social_wordpress")
+								mixin red("social_dribbble")
+								mixin red("social_vimeo")
+								mixin red("social_skype")
+								mixin red("social_googledrive")
+						+enlaces("our company mission")
+						+enlaces("company philosophy")
+						+enlaces("company promise")
+		footer
+			.container
+				.row
+					.col-xs-12.col-sm-2
+						img(src="assets/images/w-logo.jpg")
+					.creditos.text-center.col-xs-12.col-sm-6
+						p copyright © 2016. wily lab limited
+						p 
+							|designed and developed by 
+							a(href="#") wilylab
+					.redesfooter.col-xs-12.col-sm-4
+						mixin red("social_facebook")
+						mixin red("social_twitter")
+						mixin red("social_googleplus")
+						mixin red("social_pinterest")
+
+
+
+
+
+
+
+
+		script(src="assets/js/jquery.js")
+		script(src="assets/js/bootstrap.js")
+		script(src="assets/js/jquery.easing.1.3.js")
+		script(src="assets/js/classie.js")
+		script(src="assets/js/cbpAnimatedHeader.min.js")
+		script(src="assets/js/jqBootstrapValidation.js")
+		script(src="assets/js/agency.js")
